@@ -1,0 +1,300 @@
++   99.92%     0.00%  main.exe  [unknown]             [.] 0000000000000000
++   99.90%     0.42%  main.exe  main.exe              [.] refresh(Autonoma*)
+-   98.66%    19.42%  main.exe  main.exe              [.] calcColor(unsigned char*, Autonoma*, Ray, unsigned int)
+   - 79.24% calcColor(unsigned char*, Autonoma*, Ray, unsigned int)
+      + 32.54% calcColor(unsigned char*, Autonoma*, Ray, unsigned int)
+      + 19.28% getLight(double*, Autonoma*, Vector, Vector, unsigned char)
+      + 16.66% Box::getIntersection(Ray)
+      + 2.09% cfree@GLIBC_2.2.5
+        1.66% insertionSort(TimeAndShape*, int)
+        1.13% malloc
+        0.78% Plane::getIntersection(Ray)
+        0.71% Plane::getColor(unsigned char*, double*, double*, double*, Autonoma*, Ray, unsigned int)
+        0.63% Sphere::getIntersection(Ray)
+        0.58% Disk::getIntersection(Ray)
+        0.50% Vector::operator+(Vector)
+   + 19.42% 0
++   34.18%     4.06%  main.exe  main.exe              [.] getLight(double*, Autonoma*, Vector, Vector, unsigned char)
++   28.82%     5.32%  main.exe  main.exe              [.] Box::getIntersection(Ray)
++   19.05%     8.46%  main.exe  main.exe              [.] Box::getLightIntersection(Ray, double*)
++   14.76%    13.90%  main.exe  main.exe              [.] solveScalers(Vector, Vector, Vector, Vector)
++    9.14%     6.78%  main.exe  main.exe              [.] Plane::getIntersection(Ray)
++    8.06%     7.64%  main.exe  main.exe              [.] Vector::Vector(double, double, double)
++    6.81%     4.42%  main.exe  main.exe              [.] Vector::operator+(Vector)
++    6.65%     4.14%  main.exe  main.exe              [.] Vector::operator*(double)
++    6.19%     6.00%  main.exe  main.exe              [.] Vector::dot(Vector)
++    3.62%     1.38%  main.exe  libc.so.6             [.] cfree@GLIBC_2.2.5
++    3.30%     2.26%  main.exe  main.exe              [.] Vector::operator-(Vector)
++    2.82%     2.80%  main.exe  main.exe              [.] insertionSort(TimeAndShape*, int)
++    2.29%     2.18%  main.exe  libc.so.6             [.] _int_free
++    2.28%     2.19%  main.exe  main.exe              [.] Ray::Ray(Vector const&, Vector const&)
++    1.93%     1.87%  main.exe  libc.so.6             [.] malloc
++    1.66%     1.13%  main.exe  main.exe              [.] Plane::getLightIntersection(Ray, double*)
++    1.18%     0.40%  main.exe  main.exe              [.] Plane::getColor(unsigned char*, double*, double*, double*, Autonoma*, Ray, unsigned int)
++    1.07%     0.45%  main.exe  main.exe              [.] Sphere::getIntersection(Ray)
++    1.01%     0.44%  main.exe  main.exe              [.] Sphere::getLightIntersection(Ray, double*)
++    0.83%     0.16%  main.exe  main.exe              [.] Disk::getIntersection(Ray)
+     0.81%     0.41%  main.exe  main.exe              [.] std::numeric_limits<double>::infinity()
++    0.78%     0.69%  main.exe  main.exe              [.] fix(double)
++    0.67%     0.00%  main.exe  [kernel.kallsyms]     [k] asm_sysvec_apic_timer_interrupt
++    0.65%     0.01%  main.exe  [kernel.kallsyms]     [k] sysvec_apic_timer_interrupt
+     0.62%     0.41%  main.exe  main.exe              [.] Disk::getLightIntersection(Ray, double*)
++    0.52%     0.00%  main.exe  [kernel.kallsyms]     [k] __sysvec_apic_timer_interrupt
++    0.52%     0.00%  main.exe  [kernel.kallsyms]     [k] hrtimer_interrupt
+     0.49%     0.45%  main.exe  main.exe              [.] Vector::mag2()
+     0.46%     0.00%  main.exe  [kernel.kallsyms]     [k] __hrtimer_run_queues
+     0.44%     0.01%  main.exe  [kernel.kallsyms]     [k] tick_nohz_highres_handler
+     0.39%     0.01%  main.exe  [kernel.kallsyms]     [k] tick_sched_handle
+     0.39%     0.00%  main.exe  [kernel.kallsyms]     [k] update_process_times
+     0.35%     0.01%  main.exe  [kernel.kallsyms]     [k] scheduler_tick
+     0.25%     0.19%  main.exe  main.exe              [.] free@plt
+     0.24%     0.10%  main.exe  main.exe              [.] Vector::normalize()
+     0.24%     0.19%  main.exe  main.exe              [.] Vector::mag()
+     0.20%     0.20%  main.exe  main.exe              [.] Plane::getNormal(Vector)
+     0.20%     0.15%  main.exe  main.exe              [.] malloc@plt
+     0.19%     0.13%  main.exe  main.exe              [.] operator*(double, Vector)
+     0.15%     0.01%  main.exe  [kernel.kallsyms]     [k] task_tick_fair
+     0.11%     0.01%  main.exe  [kernel.kallsyms]     [k] irq_exit_rcu
+     0.11%     0.00%  main.exe  libm.so.6             [.] __atan2
+     0.11%     0.10%  main.exe  libm.so.6             [.] __ieee754_atan2_fma
+     0.11%     0.07%  main.exe  [kernel.kallsyms]     [k] update_cfs_group
+     0.10%     0.09%  main.exe  libm.so.6             [.] fmod@@GLIBC_2.38
+     0.10%     0.01%  main.exe  [kernel.kallsyms]     [k] __irq_exit_rcu
+     0.09%     0.00%  main.exe  [kernel.kallsyms]     [k] handle_softirqs
+     0.08%     0.02%  main.exe  main.exe              [.] Sphere::getColor(unsigned char*, double*, double*, double*, Autonoma*, Ray, unsigned int)
+     0.07%     0.00%  main.exe  [kernel.kallsyms]     [k] perf_event_task_tick
+     0.07%     0.06%  main.exe  [kernel.kallsyms]     [k] perf_adjust_freq_unthr_context
+     0.06%     0.06%  main.exe  libm.so.6             [.] __sqrt_finite@GLIBC_2.15
+     0.05%     0.00%  main.exe  [kernel.kallsyms]     [k] asm_exc_page_fault
+     0.05%     0.05%  main.exe  [kernel.kallsyms]     [k] native_irq_return_iret
+     0.05%     0.01%  main.exe  [kernel.kallsyms]     [k] __run_timers
+     0.05%     0.00%  main.exe  [kernel.kallsyms]     [k] run_timer_softirq
+     0.05%     0.01%  main.exe  [kernel.kallsyms]     [k] clockevents_program_event
+     0.05%     0.01%  main.exe  [kernel.kallsyms]     [k] update_load_avg
+     0.05%     0.00%  main.exe  [kernel.kallsyms]     [k] tick_program_event
+     0.05%     0.02%  main.exe  main.exe              [.] ColorTexture::getColor(unsigned char*, double*, double*, double*, double, double)
+     0.05%     0.00%  main.exe  [kernel.kallsyms]     [k] call_timer_fn
+     0.04%     0.04%  main.exe  main.exe              [.] operator*(int, Vector)
+     0.04%     0.03%  main.exe  libm.so.6             [.] __sqrt
+     0.04%     0.03%  main.exe  [kernel.kallsyms]     [k] update_curr
+     0.04%     0.00%  main.exe  [kernel.kallsyms]     [k] tick_sched_do_timer
+     0.04%     0.00%  main.exe  [kernel.kallsyms]     [k] entry_SYSCALL_64_after_hwframe
+     0.04%     0.00%  main.exe  [kernel.kallsyms]     [k] do_syscall_64
+     0.04%     0.00%  main.exe  [kernel.kallsyms]     [k] x64_sys_call
+     0.04%     0.00%  main.exe  [kernel.kallsyms]     [k] exc_page_fault
+     0.04%     0.00%  main.exe  [kernel.kallsyms]     [k] do_user_addr_fault
+     0.04%     0.00%  main.exe  [kernel.kallsyms]     [k] handle_mm_fault
+     0.04%     0.02%  main.exe  [kernel.kallsyms]     [k] __handle_mm_fault
+     0.04%     0.02%  main.exe  main.exe              [.] sqrt@plt
+     0.04%     0.00%  main.exe  [kernel.kallsyms]     [k] fq_flush_timeout
+     0.04%     0.03%  main.exe  main.exe              [.] ImageTexture::getColor(unsigned char*, double*, double*, double*, double, double)
+     0.04%     0.02%  main.exe  [kernel.kallsyms]     [k] reweight_entity
+     0.04%     0.00%  main.exe  [kernel.kallsyms]     [k] tick_do_update_jiffies64
+     0.04%     0.00%  main.exe  [kernel.kallsyms]     [k] update_wall_time
+     0.04%     0.00%  main.exe  [kernel.kallsyms]     [k] timekeeping_advance
+     0.04%     0.00%  main.exe  main.exe              [.] main
+     0.03%     0.03%  main.exe  [kernel.kallsyms]     [k] __update_load_avg_cfs_rq
+     0.02%     0.01%  main.exe  [kernel.kallsyms]     [k] trigger_load_balance
+     0.02%     0.02%  main.exe  [kernel.kallsyms]     [k] native_write_msr
+     0.02%     0.02%  main.exe  [kernel.kallsyms]     [k] read_tsc
+     0.02%     0.01%  main.exe  [kernel.kallsyms]     [k] intel_flush_iotlb_all
+     0.02%     0.02%  main.exe  [kernel.kallsyms]     [k] irqentry_exit_to_user_mode
+     0.02%     0.00%  main.exe  [kernel.kallsyms]     [k] irqentry_exit
+     0.02%     0.00%  main.exe  [kernel.kallsyms]     [k] timekeeping_update
+     0.02%     0.00%  main.exe  [kernel.kallsyms]     [k] handle_pte_fault
+     0.02%     0.02%  main.exe  [kernel.kallsyms]     [k] __raw_spin_lock_irqsave
+     0.02%     0.00%  main.exe  [kernel.kallsyms]     [k] _raw_spin_lock_irqsave
+     0.02%     0.00%  main.exe  [kernel.kallsyms]     [k] run_rebalance_domains
+     0.02%     0.01%  main.exe  [kernel.kallsyms]     [k] update_blocked_averages
+     0.02%     0.02%  main.exe  libm.so.6             [.] with_errno
+     0.02%     0.00%  main.exe  libc.so.6             [.] _IO_fwrite
+     0.02%     0.00%  main.exe  libc.so.6             [.] _IO_file_xsputn@@GLIBC_2.2.5
+     0.02%     0.00%  main.exe  libc.so.6             [.] __GI___libc_write
+     0.02%     0.00%  main.exe  [kernel.kallsyms]     [k] __x64_sys_write
+     0.02%     0.00%  main.exe  [kernel.kallsyms]     [k] ksys_write
+     0.02%     0.00%  main.exe  [kernel.kallsyms]     [k] vfs_write
+     0.02%     0.00%  main.exe  [kernel.kallsyms]     [k] ext4_file_write_iter
+     0.02%     0.00%  main.exe  [kernel.kallsyms]     [k] ext4_buffered_write_iter
+     0.02%     0.00%  main.exe  [kernel.kallsyms]     [k] generic_perform_write
+     0.02%     0.01%  main.exe  [kernel.kallsyms]     [k] kick_ilb
+     0.02%     0.00%  main.exe  [kernel.kallsyms]     [k] nohz_balancer_kick
+     0.02%     0.00%  main.exe  [kernel.kallsyms]     [k] do_anonymous_page
+     0.02%     0.01%  main.exe  main.exe              [.] Plane::reversible()
+     0.02%     0.02%  main.exe  [kernel.kallsyms]     [k] __mod_memcg_lruvec_state
+     0.02%     0.00%  main.exe  [kernel.kallsyms]     [k] __lruvec_stat_mod_folio
+     0.02%     0.00%  main.exe  [kernel.kallsyms]     [k] __mod_lruvec_state
+     0.02%     0.02%  main.exe  [kernel.kallsyms]     [k] update_vdso_data.constprop.0
+     0.02%     0.02%  main.exe  [kernel.kallsyms]     [k] clear_page_erms
+     0.02%     0.00%  main.exe  [kernel.kallsyms]     [k] alloc_pages_mpol
+     0.02%     0.00%  main.exe  [kernel.kallsyms]     [k] __alloc_pages
+     0.02%     0.00%  main.exe  [kernel.kallsyms]     [k] get_page_from_freelist
+     0.01%     0.01%  main.exe  [kernel.kallsyms]     [k] rcu_sched_clock_irq
+     0.01%     0.01%  main.exe  [kernel.kallsyms]     [k] __update_load_avg_se
+     0.01%     0.01%  main.exe  [kernel.kallsyms]     [k] __calc_delta.constprop.0
+     0.01%     0.01%  main.exe  [kernel.kallsyms]     [k] avg_vruntime
+     0.01%     0.00%  main.exe  [kernel.kallsyms]     [k] fq_flush_iotlb
+     0.01%     0.01%  main.exe  [kernel.kallsyms]     [k] arch_scale_freq_tick
+     0.01%     0.01%  main.exe  [kernel.kallsyms]     [k] native_read_msr
+     0.01%     0.00%  main.exe  ld-linux-x86-64.so.2  [.] _dl_start_user
+     0.01%     0.00%  main.exe  ld-linux-x86-64.so.2  [.] _dl_start
+     0.01%     0.00%  main.exe  ld-linux-x86-64.so.2  [.] _dl_sysdep_start
+     0.01%     0.00%  main.exe  ld-linux-x86-64.so.2  [.] dl_main
+     0.01%     0.00%  main.exe  ld-linux-x86-64.so.2  [.] _dl_relocate_object
+     0.01%     0.00%  main.exe  ld-linux-x86-64.so.2  [.] _dl_lookup_symbol_x
+     0.01%     0.00%  main.exe  [kernel.kallsyms]     [k] asm_common_interrupt
+     0.01%     0.00%  main.exe  [kernel.kallsyms]     [k] common_interrupt
+     0.01%     0.00%  main.exe  [unknown]             [.] 0x3cd8ee1c5a3f27f8
+     0.01%     0.00%  main.exe  [kernel.kallsyms]     [k] pud_val
+     0.01%     0.01%  main.exe  [kernel.kallsyms]     [k] blk_stat_timer_fn
+     0.01%     0.01%  main.exe  [kernel.kallsyms]     [k] find_lock_entries
+     0.01%     0.00%  main.exe  libc.so.6             [.] fopen@@GLIBC_2.2.5
+     0.01%     0.00%  main.exe  libc.so.6             [.] _IO_file_fopen@@GLIBC_2.2.5
+     0.01%     0.00%  main.exe  libc.so.6             [.] _IO_file_open
+     0.01%     0.00%  main.exe  libc.so.6             [.] __GI___libc_open
+     0.01%     0.00%  main.exe  [kernel.kallsyms]     [k] __x64_sys_openat
+     0.01%     0.00%  main.exe  [kernel.kallsyms]     [k] do_sys_openat2
+     0.01%     0.00%  main.exe  [kernel.kallsyms]     [k] do_filp_open
+     0.01%     0.00%  main.exe  [kernel.kallsyms]     [k] path_openat
+     0.01%     0.00%  main.exe  [kernel.kallsyms]     [k] do_open
+     0.01%     0.00%  main.exe  [kernel.kallsyms]     [k] do_truncate
+     0.01%     0.00%  main.exe  [kernel.kallsyms]     [k] notify_change
+     0.01%     0.00%  main.exe  [kernel.kallsyms]     [k] ext4_setattr
+     0.01%     0.00%  main.exe  [kernel.kallsyms]     [k] truncate_pagecache
+     0.01%     0.00%  main.exe  [kernel.kallsyms]     [k] truncate_inode_pages_range
+     0.01%     0.00%  main.exe  [kernel.kallsyms]     [k] ext4_da_write_end
+     0.01%     0.00%  main.exe  [kernel.kallsyms]     [k] block_write_end
+     0.01%     0.00%  main.exe  [kernel.kallsyms]     [k] __block_commit_write
+     0.01%     0.00%  main.exe  [kernel.kallsyms]     [k] mark_buffer_dirty
+     0.01%     0.00%  main.exe  [kernel.kallsyms]     [k] __folio_mark_dirty
+     0.01%     0.00%  main.exe  [kernel.kallsyms]     [k] folio_account_dirtied
+     0.01%     0.01%  main.exe  [kernel.kallsyms]     [k] native_apic_msr_eoi
+     0.01%     0.00%  main.exe  [kernel.kallsyms]     [k] ext4_da_write_begin
+     0.01%     0.00%  main.exe  [kernel.kallsyms]     [k] __filemap_get_folio
+     0.01%     0.00%  main.exe  [kernel.kallsyms]     [k] filemap_alloc_folio
+     0.01%     0.00%  main.exe  [kernel.kallsyms]     [k] folio_alloc
+     0.01%     0.00%  main.exe  [kernel.kallsyms]     [k] update_vsyscall
+     0.01%     0.01%  main.exe  [kernel.kallsyms]     [k] folio_clear_dirty_for_io
+     0.01%     0.00%  main.exe  libc.so.6             [.] fclose@@GLIBC_2.2.5
+     0.01%     0.00%  main.exe  libc.so.6             [.] __close_nocancel
+     0.01%     0.00%  main.exe  [kernel.kallsyms]     [k] __x64_sys_close
+     0.01%     0.00%  main.exe  [kernel.kallsyms]     [k] __fput_sync
+     0.01%     0.00%  main.exe  [kernel.kallsyms]     [k] __fput
+     0.01%     0.00%  main.exe  [kernel.kallsyms]     [k] ext4_release_file
+     0.01%     0.00%  main.exe  [kernel.kallsyms]     [k] ext4_alloc_da_blocks
+     0.01%     0.00%  main.exe  [kernel.kallsyms]     [k] filemap_flush
+     0.01%     0.00%  main.exe  [kernel.kallsyms]     [k] __filemap_fdatawrite_range
+     0.01%     0.00%  main.exe  [kernel.kallsyms]     [k] filemap_fdatawrite_wbc
+     0.01%     0.00%  main.exe  [kernel.kallsyms]     [k] do_writepages
+     0.01%     0.00%  main.exe  [kernel.kallsyms]     [k] ext4_writepages
+     0.01%     0.00%  main.exe  [kernel.kallsyms]     [k] ext4_do_writepages
+     0.01%     0.00%  main.exe  [kernel.kallsyms]     [k] mpage_map_and_submit_extent
+     0.01%     0.00%  main.exe  [kernel.kallsyms]     [k] mpage_map_and_submit_buffers
+     0.01%     0.00%  main.exe  [kernel.kallsyms]     [k] mpage_submit_folio
+     0.01%     0.01%  main.exe  [kernel.kallsyms]     [k] next_uptodate_folio
+     0.01%     0.00%  main.exe  main.exe              [.] _start
+     0.01%     0.00%  main.exe  libc.so.6             [.] __libc_start_main@@GLIBC_2.34
+     0.01%     0.00%  main.exe  libc.so.6             [.] __libc_start_call_main
+     0.01%     0.00%  main.exe  libc.so.6             [.] 0x000079026ec47bbe
+     0.01%     0.00%  main.exe  libc.so.6             [.] _exit
+     0.01%     0.00%  main.exe  [kernel.kallsyms]     [k] do_fault
+     0.01%     0.00%  main.exe  [kernel.kallsyms]     [k] do_read_fault
+     0.01%     0.00%  main.exe  [kernel.kallsyms]     [k] filemap_map_pages
+     0.01%     0.01%  main.exe  [kernel.kallsyms]     [k] free_pages_and_swap_cache
+     0.01%     0.00%  main.exe  [kernel.kallsyms]     [k] __x64_sys_exit_group
+     0.01%     0.00%  main.exe  [kernel.kallsyms]     [k] do_group_exit
+     0.01%     0.00%  main.exe  [kernel.kallsyms]     [k] do_exit
+     0.01%     0.00%  main.exe  [kernel.kallsyms]     [k] exit_mm
+     0.01%     0.00%  main.exe  [kernel.kallsyms]     [k] mmput
+     0.01%     0.00%  main.exe  [kernel.kallsyms]     [k] __mmput
+     0.01%     0.00%  main.exe  [kernel.kallsyms]     [k] exit_mmap
+     0.01%     0.00%  main.exe  [kernel.kallsyms]     [k] tlb_finish_mmu
+     0.01%     0.00%  main.exe  [kernel.kallsyms]     [k] tlb_batch_pages_flush
+     0.01%     0.01%  main.exe  [kernel.kallsyms]     [k] timerqueue_add
+     0.01%     0.00%  main.exe  [kernel.kallsyms]     [k] enqueue_hrtimer
+     0.01%     0.01%  main.exe  [kernel.kallsyms]     [k] load_balance
+     0.01%     0.00%  main.exe  [kernel.kallsyms]     [k] rebalance_domains
+     0.01%     0.01%  main.exe  [kernel.kallsyms]     [k] free_iova_fast
+     0.01%     0.00%  main.exe  [kernel.kallsyms]     [k] fq_ring_free_locked
+     0.01%     0.01%  main.exe  [kernel.kallsyms]     [k] ktime_get_update_offsets_now
+     0.01%     0.01%  main.exe  main.exe              [.] atan2@plt
+     0.01%     0.01%  main.exe  [kernel.kallsyms]     [k] __cgroup_account_cputime_field
+     0.01%     0.00%  main.exe  [kernel.kallsyms]     [k] account_process_tick
+     0.01%     0.00%  main.exe  [kernel.kallsyms]     [k] account_user_time
+     0.01%     0.01%  main.exe  [kernel.kallsyms]     [k] pvclock_gtod_notify
+     0.01%     0.00%  main.exe  [kernel.kallsyms]     [k] raw_notifier_call_chain
+     0.01%     0.01%  main.exe  [kernel.kallsyms]     [k] rcu_pending
+     0.01%     0.01%  main.exe  [kernel.kallsyms]     [k] native_sched_clock
+     0.01%     0.00%  main.exe  [kernel.kallsyms]     [k] update_rq_clock
+     0.01%     0.00%  main.exe  [kernel.kallsyms]     [k] sched_clock_cpu
+     0.01%     0.00%  main.exe  [kernel.kallsyms]     [k] sched_clock
+     0.01%     0.00%  main.exe  [kernel.kallsyms]     [k] sched_clock_noinstr
+     0.01%     0.00%  main.exe  [kernel.kallsyms]     [k] folio_add_new_anon_rmap
+     0.01%     0.00%  main.exe  [unknown]             [.] 0x405d3a0adc9bdda6
+     0.01%     0.00%  main.exe  [unknown]             [.] 0x00007ffffe7a2cc8
+     0.01%     0.00%  main.exe  [kernel.kallsyms]     [k] alloc_anon_folio
+     0.01%     0.00%  main.exe  [kernel.kallsyms]     [k] vma_alloc_folio
+     0.01%     0.01%  main.exe  [kernel.kallsyms]     [k] hrtimer_active
+     0.01%     0.01%  main.exe  [kernel.kallsyms]     [k] x86_pmu_disable
+     0.01%     0.00%  main.exe  [kernel.kallsyms]     [k] profile_tick
+     0.01%     0.01%  main.exe  [kernel.kallsyms]     [k] idle_cpu
+     0.01%     0.01%  main.exe  [kernel.kallsyms]     [k] xas_find
+     0.01%     0.00%  main.exe  [kernel.kallsyms]     [k] xa_find
+     0.01%     0.01%  main.exe  [kernel.kallsyms]     [k] qi_check_fault
+     0.01%     0.00%  main.exe  [kernel.kallsyms]     [k] qi_flush_iotlb
+     0.01%     0.00%  main.exe  [kernel.kallsyms]     [k] qi_submit_sync
+     0.01%     0.01%  main.exe  [kernel.kallsyms]     [k] _raw_spin_lock_irq
+     0.01%     0.00%  main.exe  [kernel.kallsyms]     [k] task_work_run
+     0.01%     0.01%  main.exe  [kernel.kallsyms]     [k] __update_blocked_fair
+     0.01%     0.01%  main.exe  [kernel.kallsyms]     [k] timerqueue_del
+     0.01%     0.00%  main.exe  [kernel.kallsyms]     [k] __remove_hrtimer
+     0.01%     0.01%  main.exe  [kernel.kallsyms]     [k] task_tick_mm_cid
+     0.01%     0.01%  main.exe  [kernel.kallsyms]     [k] lapic_next_deadline
+     0.01%     0.01%  main.exe  [kernel.kallsyms]     [k] _raw_spin_lock
+     0.01%     0.01%  main.exe  [kernel.kallsyms]     [k] update_rt_rq_load_avg
+     0.01%     0.01%  main.exe  libm.so.6             [.] __atan2_finite@GLIBC_2.15@plt
+     0.01%     0.01%  main.exe  [kernel.kallsyms]     [k] _raw_spin_trylock
+     0.01%     0.00%  main.exe  [kernel.kallsyms]     [k] rcu_core_si
+     0.01%     0.00%  main.exe  [kernel.kallsyms]     [k] rcu_core
+     0.01%     0.01%  main.exe  ld-linux-x86-64.so.2  [.] do_lookup_x
+     0.00%     0.00%  main.exe  libc.so.6             [.] __GI_____strtod_l_internal
+     0.00%     0.00%  main.exe  main.exe              [.] createInputs(char const*)
+     0.00%     0.00%  main.exe  libc.so.6             [.] __isoc23_sscanf
+     0.00%     0.00%  main.exe  libc.so.6             [.] __vfscanf_internal
+     0.00%     0.00%  main.exe  [kernel.kallsyms]     [k] llist_add_batch
+     0.00%     0.00%  main.exe  [kernel.kallsyms]     [k] smp_call_function_single_async
+     0.00%     0.00%  main.exe  [kernel.kallsyms]     [k] generic_exec_single
+     0.00%     0.00%  main.exe  ld-linux-x86-64.so.2  [.] _dl_map_object_deps
+     0.00%     0.00%  main.exe  ld-linux-x86-64.so.2  [.] _dl_catch_exception
+     0.00%     0.00%  main.exe  ld-linux-x86-64.so.2  [.] openaux
+     0.00%     0.00%  main.exe  ld-linux-x86-64.so.2  [.] _dl_map_object
+     0.00%     0.00%  main.exe  [kernel.kallsyms]     [k] x86_pmu_enable
+     0.00%     0.00%  main.exe  [kernel.kallsyms]     [k] intel_pmu_enable_all
+     0.00%     0.00%  main.exe  [kernel.kallsyms]     [k] __intel_pmu_enable_all.isra.0
+     0.00%     0.00%  main.exe  [kernel.kallsyms]     [k] end_repeat_nmi
+     0.00%     0.00%  main.exe  [kernel.kallsyms]     [k] nmi_restore
+     0.00%     0.00%  main.exe  [kernel.kallsyms]     [k] nmi_cpu_backtrace_handler
+     0.00%     0.00%  main.exe  [kernel.kallsyms]     [k] __rcu_read_unlock
+     0.00%     0.00%  perf-exe  [kernel.kallsyms]     [k] native_write_msr
+     0.00%     0.00%  perf-exe  [unknown]             [k] 0x00007dd7e58eef3b
+     0.00%     0.00%  perf-exe  [kernel.kallsyms]     [k] entry_SYSCALL_64_after_hwframe
+     0.00%     0.00%  perf-exe  [kernel.kallsyms]     [k] do_syscall_64
+     0.00%     0.00%  perf-exe  [kernel.kallsyms]     [k] x64_sys_call
+     0.00%     0.00%  perf-exe  [kernel.kallsyms]     [k] __x64_sys_execve
+     0.00%     0.00%  perf-exe  [kernel.kallsyms]     [k] do_execveat_common.isra.0
+     0.00%     0.00%  perf-exe  [kernel.kallsyms]     [k] bprm_execve
+     0.00%     0.00%  perf-exe  [kernel.kallsyms]     [k] bprm_execve.part.0
+     0.00%     0.00%  perf-exe  [kernel.kallsyms]     [k] exec_binprm
+     0.00%     0.00%  perf-exe  [kernel.kallsyms]     [k] search_binary_handler
+     0.00%     0.00%  perf-exe  [kernel.kallsyms]     [k] load_elf_binary
+     0.00%     0.00%  perf-exe  [kernel.kallsyms]     [k] begin_new_exec
+     0.00%     0.00%  perf-exe  [kernel.kallsyms]     [k] perf_event_exec
+     0.00%     0.00%  perf-exe  [kernel.kallsyms]     [k] perf_event_enable_on_exec
+     0.00%     0.00%  perf-exe  [kernel.kallsyms]     [k] ctx_resched
+     0.00%     0.00%  perf-exe  [kernel.kallsyms]     [k] perf_ctx_enable
+     0.00%     0.00%  perf-exe  [kernel.kallsyms]     [k] x86_pmu_enable
+     0.00%     0.00%  perf-exe  [kernel.kallsyms]     [k] intel_pmu_enable_all
+     0.00%     0.00%  main.exe  [kernel.kallsyms]     [k] schedule
+     0.00%     0.00%  main.exe  [kernel.kallsyms]     [k] __schedule
+     0.00%     0.00%  main.exe  [kernel.kallsyms]     [k] finish_task_switch.isra.0
+     0.00%     0.00%  main.exe  [kernel.kallsyms]     [k] __perf_event_task_sched_in
+     0.00%     0.00%  main.exe  [kernel.kallsyms]     [k] perf_ctx_enable
