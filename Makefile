@@ -20,3 +20,4 @@ flame:
 
 clean:
 	rm -f ./*.exe
+
