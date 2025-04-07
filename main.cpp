@@ -49,15 +49,22 @@ Planet *next(Planet *planets) {
   }
 
   for (int i = 0; i < nplanets; i++) {
-    for (int j = 0; j < nplanets; j++) {
+    for (int j = i + 1; j < nplanets; j++) {
       double dx = planets[j].x - planets[i].x;
       double dy = planets[j].y - planets[i].y;
       double distSqr = dx * dx + dy * dy + 0.0001;
       double invDist = planets[i].mass * planets[j].mass / sqrt(distSqr);
       double invDist3 = invDist * invDist * invDist;
+
       nextplanets[i].vx += dt * dx * invDist3;
       nextplanets[i].vy += dt * dy * invDist3;
+
+      nextplanets[j].vx -= dt * dx * invDist3;
+      nextplanets[j].vy -= dt * dy * invDist3;
     }
+  }
+
+  for (int i = 0; i < nplanets; i++) {
     nextplanets[i].x += dt * nextplanets[i].vx;
     nextplanets[i].y += dt * nextplanets[i].vy;
   }
