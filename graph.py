@@ -6,16 +6,16 @@ base_line_mid = [12.486]
 reduce_work_mid = [8.207]
 mid_data = [base_line_mid, reduce_work_mid]
 
-# ./main.exe 500 5000
-# final location -352.540573 138.935489
-base_line_small = [3.124]
-reduce_work_small = [2.045]
+# ./main.exe 5 100000000
+# final location -246420916.320709 327085378.139325
+base_line_small = [8.774]
+reduce_work_small = [4.944]
 small_data = [base_line_small, reduce_work_small]
 
-# ./main.exe 5000 500
+# ./main.exe 1000 10000
 # final location -763.433705 1203.599962
-base_line_large = [31.864]
-reduce_work_large = [22.0122]
+base_line_large = [25.872]
+reduce_work_large = [14.223737]
 large_data = [base_line_large, reduce_work_large]
 
 # Calculate the means and standard deviations
