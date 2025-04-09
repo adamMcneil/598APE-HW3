@@ -5,21 +5,27 @@ import numpy as np
 base_line_mid = [12.486]
 reduce_work_mid = [8.207]
 rust_rw = [7.85, 8.05, 7.93]
-mid_data = [base_line_mid, reduce_work_mid, rust_rw]
+masses = [7.65, 7.80]
+init = [5.399, 5.506]
+mid_data = [base_line_mid, reduce_work_mid, masses]
 
 # ./main.exe 5 100000000
 # final location -246420916.320709 327085378.139325
 base_line_small = [8.774]
 reduce_work_small = [4.944]
 rust_rw = [5.27, 5.33]
-small_data = [base_line_small, reduce_work_small, rust_rw]
+masses = [4.95, 5.11]
+init = [5.23, 5.15]
+small_data = [base_line_small, reduce_work_small, masses]
 
 # ./main.exe 1000 10000
 # final location -763.433705 1203.599962
 base_line_large = [25.872]
 reduce_work_large = [14.223737]
 rust_rw = [15.93, 16.56]
-large_data = [base_line_large, reduce_work_large, rust_rw]
+masses = [16.34, 16.38]
+init = [11.02, 11.08]
+large_data = [base_line_large, reduce_work_large, masses]
 
 # Calculate the means and standard deviations
 mid_means = [np.min(data) for data in mid_data]
