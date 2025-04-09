@@ -7,7 +7,7 @@ reduce_work_mid = [8.207]
 rust_rw = [7.85, 8.05, 7.93]
 masses = [7.65, 7.80]
 init = [5.399, 5.506]
-mid_data = [base_line_mid, reduce_work_mid, masses]
+mid_data = [base_line_mid, reduce_work_mid, masses, init]
 
 # ./main.exe 5 100000000
 # final location -246420916.320709 327085378.139325
@@ -16,7 +16,7 @@ reduce_work_small = [4.944]
 rust_rw = [5.27, 5.33]
 masses = [4.95, 5.11]
 init = [5.23, 5.15]
-small_data = [base_line_small, reduce_work_small, masses]
+small_data = [base_line_small, reduce_work_small, masses, init]
 
 # ./main.exe 1000 10000
 # final location -763.433705 1203.599962
@@ -25,7 +25,7 @@ reduce_work_large = [14.223737]
 rust_rw = [15.93, 16.56]
 masses = [16.34, 16.38]
 init = [11.02, 11.08]
-large_data = [base_line_large, reduce_work_large, masses]
+large_data = [base_line_large, reduce_work_large, masses, init]
 
 # Calculate the means and standard deviations
 mid_means = [np.min(data) for data in mid_data]
@@ -38,7 +38,7 @@ large_means = [np.min(data) for data in large_data]
 large_std_devs = [np.std(data) for data in large_data]
 
 # Define categorical x-axis labels
-x_labels = ["baseline", "reduced work", "rust"]
+x_labels = ["baseline", "reduced work", "masses", "init"]
 x = np.arange(len(x_labels))  # Numeric positions for categorical labels
 
 plt.errorbar(x, mid_means, yerr=mid_std_devs, capsize=5, linestyle='-', marker='^', color='red', label='Mid')

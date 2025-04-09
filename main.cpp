@@ -54,12 +54,9 @@ Planet *next(Planet *planets, int *masses) {
       nextplanets[i].vx = planets[i].vx + xc;
       nextplanets[i].vy = planets[i].vy + yc;
 
-      nextplanets[j].vx = planets[j].vx + xc;
-      nextplanets[j].vy = planets[j].vy + yc;
+      nextplanets[j].vx = planets[j].vx - xc;
+      nextplanets[j].vy = planets[j].vy - yc;
     }
-  }
-
-  for (int i = 0; i < nplanets; i++) {
     nextplanets[i].x = planets[i].x + dt * nextplanets[i].vx;
     nextplanets[i].y = planets[i].y + dt * nextplanets[i].vy;
   }
