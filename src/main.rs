@@ -33,8 +33,18 @@ impl Rng {
 }
 
 fn simulate_step(planets: &[Planet], dt: f64) -> Vec<Planet> {
-    let mut new_planets = planets.to_vec();
     let n = planets.len();
+    let mut new_planets: Vec<Planet> = Vec::with_capacity(n);
+
+    for i in 0..n {
+        new_planets.push(Planet{
+            mass: planets[i].mass,
+            x: 0.,
+            y: 0.,
+            vx: 0.,
+            vy: 0.,
+        });
+    }
 
     // Calculate velocity changes
     for i in 0..n {
@@ -45,11 +55,14 @@ fn simulate_step(planets: &[Planet], dt: f64) -> Vec<Planet> {
             let inv_dist = (planets[i].mass * planets[j].mass) / dist_sqr.sqrt();
             let inv_dist3 = inv_dist * inv_dist * inv_dist;
 
-            new_planets[i].vx += dt * dx * inv_dist3;
-            new_planets[i].vy += dt * dy * inv_dist3;
-            
-            new_planets[j].vx -= dt * dx * inv_dist3;
-            new_planets[j].vy -= dt * dy * inv_dist3;
+            let xc = dt * dx * inv_dist3;
+            let yc = dt * dy * inv_dist3;
+
+            new_planets[i].vx = planets[i].vx + xc;
+            new_planets[i].vy = planets[i].vy + yc;
+
+            new_planets[j].vx = planets[j].vx - xc;
+            new_planets[j].vy = planets[j].vy - yc;
         }
     }
 

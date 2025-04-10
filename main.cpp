@@ -9,6 +9,7 @@ float tdiff(struct timeval *start, struct timeval *end) {
 }
 
 struct Planet {
+  double mass;
   double x;
   double y;
   double vx;
@@ -37,32 +38,30 @@ int timesteps;
 double dt;
 double G;
 
-Planet *next(Planet *planets, int *masses) {
-  Planet *nextplanets = (Planet *)malloc(sizeof(Planet) * nplanets);
-
+void next(Planet *planets) {
   for (int i = 0; i < nplanets; i++) {
     for (int j = i + 1; j < nplanets; j++) {
       double dx = planets[j].x - planets[i].x;
       double dy = planets[j].y - planets[i].y;
       double distSqr = dx * dx + dy * dy + 0.0001;
-      double invDist = masses[i]* masses[j] / sqrt(distSqr);
+      double invDist = planets[i].mass * planets[j].mass / sqrt(distSqr);
       double invDist3 = invDist * invDist * invDist;
 
       double xc = dt * dx * invDist3;
       double yc = dt * dy * invDist3;
 
-      nextplanets[i].vx = planets[i].vx + xc;
-      nextplanets[i].vy = planets[i].vy + yc;
+      planets[i].vx = planets[i].vx + xc;
+      planets[i].vy = planets[i].vy + yc;
 
-      nextplanets[j].vx = planets[j].vx - xc;
-      nextplanets[j].vy = planets[j].vy - yc;
+      planets[j].vx = planets[j].vx - xc;
+      planets[j].vy = planets[j].vy - yc;
     }
-    nextplanets[i].x = planets[i].x + dt * nextplanets[i].vx;
-    nextplanets[i].y = planets[i].y + dt * nextplanets[i].vy;
   }
 
-  free(planets);
-  return nextplanets;
+  for (int i = 0; i < nplanets; i++) {
+    planets[i].x = planets[i].x + dt * planets[i].vx;
+    planets[i].y = planets[i].y + dt * planets[i].vy;
+  }
 }
 
 int main(int argc, const char **argv) {
@@ -76,9 +75,8 @@ int main(int argc, const char **argv) {
   G = 6.6743;
 
   Planet *planets = (Planet *)malloc(sizeof(Planet) * nplanets);
-  int *masses = (int *)malloc(sizeof(int) * nplanets);
   for (int i = 0; i < nplanets; i++) {
-    masses[i] = randomDouble() * 10 + 0.2;
+    planets[i].mass = randomDouble() * 10 + 0.2;
     planets[i].x = (randomDouble() - 0.5) * 100 * pow(1 + nplanets, 0.4);
     planets[i].y = (randomDouble() - 0.5) * 100 * pow(1 + nplanets, 0.4);
     planets[i].vx = randomDouble() * 5 - 2.5;
@@ -88,7 +86,7 @@ int main(int argc, const char **argv) {
   struct timeval start, end;
   gettimeofday(&start, NULL);
   for (int i = 0; i < timesteps; i++) {
-    planets = next(planets, masses);
+    next(planets);
     // printf("x=%f y=%f vx=%f vy=%f\n", planets[nplanets-1].x,
     // planets[nplanets-1].y, planets[nplanets-1].vx, planets[nplanets-1].vy);
   }
