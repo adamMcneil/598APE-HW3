@@ -40,21 +40,26 @@ double G;
 
 void next(Planet *planets) {
   for (int i = 0; i < nplanets; i++) {
-    for (int j = 0; j < nplanets; j++) {
+    for (int j = i + 1; j < nplanets; j++) {
       double dx = planets[j].x - planets[i].x;
       double dy = planets[j].y - planets[i].y;
       double distSqr = dx * dx + dy * dy + 0.0001;
       double invDist = planets[i].mass * planets[j].mass / sqrt(distSqr);
       double invDist3 = invDist * invDist * invDist;
-      planets[i].vx += dt * dx * invDist3;
-      planets[i].vy += dt * dy * invDist3;
-    }
-  }
 
-  for (int i = 0; i < nplanets; i++) {
+      double xc = dt * dx * invDist3;
+      double yc = dt * dy * invDist3;
+
+      planets[i].vx += xc;
+      planets[i].vy += yc;
+
+      planets[j].vx -= xc;
+      planets[j].vy -= yc;
+    }
     planets[i].x += dt * planets[i].vx;
     planets[i].y += dt * planets[i].vy;
   }
+
 }
 
 int main(int argc, const char **argv) {
