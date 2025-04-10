@@ -39,7 +39,9 @@ double dt;
 double G;
 
 void next(Planet *planets) {
+  #pragma omp parallel for
   for (int i = 0; i < nplanets; i++) {
+    #pragma omp parallel for
     for (int j = i + 1; j < nplanets; j++) {
       double dx = planets[j].x - planets[i].x;
       double dy = planets[j].y - planets[i].y;
